@@ -1,0 +1,206 @@
+/*--------------- Scene ---------------*/
+.scene {
+  width: 200px;
+  height: 250px;
+  position: relative;
+  margin-bottom: 50px;
+  top: 50%;
+  left: 10%;
+  margin-right: 0;
+  transform: translate(50%, 25%);
+}
+@media screen and (max-width: 1024px) {
+  .scene {
+  transform: translate(100%, 25%);
+}
+}
+@media screen and (max-width: 500px) {
+  .scene {
+  transform: translate(20%, 15%);
+}
+}
+
+/*--------------- Cube ---------------*/
+.cube {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 2;
+  transform: rotateX(-36deg) rotateY(45deg);
+  transform-style: preserve-3d;
+}
+
+.text-cubo{
+  font-size: 15px;
+  transform: translate(0, 50%);
+}
+
+.cube_count_1 {
+  z-index: 2;
+  left: 50px;
+  animation: cube 2s 1s ease infinite;
+}
+.cube_count_1 .cube__face {
+  animation-delay: 1s;
+}
+
+.cube_count_2 {
+  z-index: 1;
+  top: 38px;
+  left: -16px;
+  animation: cube 2s 1.1s ease infinite;
+}
+.cube_count_2 .cube__face {
+  animation-delay: 1.1s;
+}
+
+.cube_count_3 {
+  z-index: 1;
+  top: 38px;
+  left: 116px;
+  animation: cube 2s 1.2s ease infinite;
+}
+.cube_count_3 .cube__face {
+  animation-delay: 1.2s;
+}
+
+.cube_count_4 {
+  z-index: 2;
+  top: 116px;
+  left: -16px;
+  animation: cube 2s 1.1s ease infinite;
+}
+.cube_count_4 .cube__face {
+  animation-delay: 1.1s;
+}
+
+.cube_count_5 {
+  z-index: 1;
+  top: 116px;
+  left: 116px;
+  animation: cube 2s 1.2s ease infinite;
+}
+.cube_count_5 .cube__face {
+  animation-delay: 1.2s;
+}
+
+.cube_count_6 {
+  z-index: 0;
+  top: 154px;
+  left: 50px;
+  animation: cube 2s 1.3s ease infinite;
+}
+.cube_count_6 .cube__face {
+  animation-delay: 1.3s;
+}
+
+.cube__face {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background: rgb(76, 59, 151);
+  border: 6px solid white;
+}
+
+.cube__face--front {
+  box-shadow: inset -6px -6px 0 0 white;
+  animation: cube-face-front 2s ease infinite;
+}
+
+.cube__face--right {
+  animation: cube-face-right 2s ease infinite;
+}
+
+.cube__face--back {
+  animation: cube-face-back 2s ease infinite;
+}
+
+.cube__face--left {
+  box-shadow: inset 6px -6px 0 0 white;
+  animation: cube-face-left 2s ease infinite;
+}
+
+.cube__face--top {
+  box-shadow: inset -6px 6px 0 0 white;
+  animation: cube-face-top 2s ease infinite;
+}
+
+.cube__face--front {
+  transform: rotateY(0deg) translateZ(50px);
+}
+
+.cube__face--right {
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.cube__face--back {
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.cube__face--left {
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.cube__face--top {
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.cube__face--bottom {
+  transform: rotateX(-90deg) translateZ(50px);
+}
+
+/*--------------- Animation ---------------*/
+@keyframes cube {
+  0% {
+    transform: rotateX(-36deg) rotateY(45deg) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(-126deg) rotateY(0deg) rotateZ(-45deg);
+  }
+}
+@keyframes cube-face-front {
+  0% {
+    box-shadow: inset -6px -6px 0 0 white;
+  }
+  100% {
+    box-shadow: inset 0 0 0 0 white;
+  }
+}
+@keyframes cube-face-right {
+  0% {
+    box-shadow: inset 0 0 0 0 white;
+  }
+  50% {
+    box-shadow: inset 0 0 0 0 white;
+  }
+  100% {
+    box-shadow: inset 6px -6px 0 0 white;
+  }
+}
+@keyframes cube-face-back {
+  0% {
+    box-shadow: inset 0 0 0 0 white;
+  }
+  100% {
+    box-shadow: inset -6px -6px 0 0 white;
+  }
+}
+@keyframes cube-face-left {
+  0% {
+    box-shadow: inset 6px -6px 0 0 white;
+  }
+  100% {
+    box-shadow: inset 0 0 0 0 white;
+  }
+}
+@keyframes cube-face-top {
+  0% {
+    box-shadow: inset -6px 6px 0 0 white;
+  }
+  50% {
+    box-shadow: inset 0 0 0 0 white;
+  }
+  100% {
+    box-shadow: inset 6px -6px 0 0 white;
+  }
+}

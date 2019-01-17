@@ -1,0 +1,215 @@
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+/*
+navbar logo
+*/
+.navbar-brand{
+	font-size: 30px;
+}
+/*----------*/
+.box{
+	position: relative;
+	top: 30px;
+}
+
+section.banner{
+	padding: 210px 0;
+	position: relative;
+	min-height: 600px;
+	background-image: url('../img/bg.jpg');
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+}
+
+section.banner > .container{
+	position: relative;
+	z-index: 2;
+	color: #fff;
+}
+
+.overlay{
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	position: absolute;
+	background: rgba(76, 59, 151,0.6);
+}
+
+.chamada-banner h1{
+	border: 10px;
+	border-color: #fff;
+	color: rgb(0, 255, 234);
+	font-size: 50px;
+}
+.chamada-banner p{
+	margin: 24px 0;
+	color: #fff;
+	font-size: 21px;
+}
+.chamada-banner a{
+	display: inline-block;
+	font-size: 20px;
+	background: rgb(76, 59, 151);
+	padding: 10px 18px;
+	background: rgb(0, 255, 234);
+	font-weight: 600;
+	color: rgb(76, 59, 151);
+}
+section.cadastro-lead{
+	background: rgb(76, 59, 151);
+	padding: 20px;
+}
+
+section.cadastro-lead h2, span{
+	color: #fff;
+	font-size: 24px;
+
+}
+section.cadastro-lead form, span{
+	position: relative;
+	top: 10px;
+}
+
+section.cadastro-lead input[type=email]{
+	width: 60%;
+	height: 40px;
+	border: 1px solid #ccc;
+	padding-left: 8px;
+}
+section.cadastro-lead input[type=submit]{
+	width: 20%;
+	height: 40px;
+	border: 1px solid #ccc;
+}
+
+section.depoimento h2{
+	text-transform: uppercase;
+	color: #4b4b4b;
+}
+
+section.depoimento blockquote{
+	color: #4b4b4b;
+	font-size: 16px;
+}
+
+section.diferenciais{
+	padding: 30px 0;
+	background: rgb(76, 59, 151);
+}
+section.diferenciais h2{
+	text-transform: uppercase;
+	color: #fff;
+}
+.diferencias-container{
+ margin-top: 30px;
+}
+.diferencias-container h2{
+	text-transform: uppercase;
+	color: #fff;
+}
+.diferencias-container p{
+	color: #c0c0c0;
+}
+.box-diferenciais {
+	margin: 35px;
+	-webkit-box-shadow: -9px 10px 37px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: -9px 10px 37px 0px rgba(0,0,0,0.75);
+	box-shadow: -9px 10px 37px 0px rgba(0,0,0,0.75);
+
+	background: rgba(7,72,126,1);
+	background: -moz-linear-gradient(left, rgba(7,72,126,1) 0%, rgba(7,72,126,1) 1%, rgba(150,46,255,1) 96%, rgba(165,20,255,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(7,72,126,1)), color-stop(1%, rgba(7,72,126,1)), color-stop(96%, rgba(150,46,255,1)), color-stop(100%, rgba(165,20,255,1)));
+	background: -webkit-linear-gradient(left, rgba(7,72,126,1) 0%, rgba(7,72,126,1) 1%, rgba(150,46,255,1) 96%, rgba(165,20,255,1) 100%);
+	background: -o-linear-gradient(left, rgba(7,72,126,1) 0%, rgba(7,72,126,1) 1%, rgba(150,46,255,1) 96%, rgba(165,20,255,1) 100%);
+	background: -ms-linear-gradient(left, rgba(7,72,126,1) 0%, rgba(7,72,126,1) 1%, rgba(150,46,255,1) 96%, rgba(165,20,255,1) 100%);
+	background: linear-gradient(to right, rgba(7,72,126,1) 0%, rgba(7,72,126,1) 1%, rgba(150,46,255,1) 96%, rgba(165,20,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#07487e', endColorstr='#a514ff', GradientType=1 );
+}
+
+section.equipe{
+	margin-bottom: 50px;
+}
+.equipe h2{
+	text-transform: uppercase;
+}
+.equipe-container{padding-top: 30px;padding-bottom: 30px; }
+.equipe-single{
+	margin-bottom: 15px;
+	width: 100%;
+	padding: 20px 10px;
+	box-shadow: 8px 7px 5px -3px rgba(20,20,20,0.6);
+	background: rgb(76, 59, 151);
+	color: #c0c0c0;
+	height: auto;
+}
+.equipe-single h3{
+	color: #fff;
+}
+
+.user-picture{
+	width: 100%;
+	padding-top: 100%;
+	background: #ccc;
+	border-radius: 50%;
+	background: no-repeat;
+	background-size: cover;
+}
+
+.imagem-equipe{
+	width: 300px;
+	height: 70px;
+}
+
+.final-site{
+	background: rgb(76, 59, 151);
+	color: #fff;
+	padding-bottom: 50px;
+}
+
+.final-site h2{
+	text-transform: uppercase;
+}
+.final-site textarea{
+	resize: none;
+}
+.page-footer, .page-footer i{
+	background: rgb(76, 59, 151);
+	color: #fff;
+}
+
+
+@media screen and (max-width: 1024px) {
+	section.cadastro-lead form{
+		position: relative;
+		top: 0px;
+	}
+	.box-diferenciais{
+		padding: 10px;
+	}
+}
+@media screen and (max-width: 500px){
+
+	.chamada-banner h1{
+	border: 10px;
+	border-color: #fff;
+	color: rgb(0, 255, 234);
+	font-size: 40px;
+	}
+
+	section.cadastro-lead input[type=submit]{
+		width: 200px;
+		margin-top: 8px;
+		display: inline-block;
+	}
+
+	section.cadastro-lead input[type=email]{
+		width: 100%;
+	}
+
+}
