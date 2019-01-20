@@ -1,3 +1,9 @@
+<?php 
+	$pdo = new PDO('mysql:host=localhost;dbname=cms','root','');
+	$sobre = $pdo->prepare("SELECT * FROM `tb_sobre`");
+	$sobre->execute();
+	$sobre = $sobre->fetch()['sobre'];
+?>
 <!doctype html>
 <html lang="pt-br">
 	<head>
@@ -70,7 +76,7 @@
 					<div class="col-md-12">
 						<h2 id="#sobre">Sobre</h2>
 						<blockquote>
-							<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti illum quia iure excepturi expedita commodi, porro beatae, voluptatum odit repudiandae necessitatibus laborum eveniet, aut rerum saepe sit sapiente tenetur et."</p>
+							<p>"<?php echo $sobre; ?>"</p>
 						</blockquote>
 					</div>
 				</div>
