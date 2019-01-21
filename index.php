@@ -111,24 +111,32 @@
 		<div class="container equipe-container">
 			<div class="row">
 
+			<?php 
+				$selectMembros = $pdo->prepare("SELECT * FROM `tb_equipe`");
+				$selectMembros->execute();
+				$membros = $selectMembros->fetchAll();
+				for($i = 0; $i < count($membros); $i++){
+			 ?>
 				<div class="col-md-6">
 					<div class="equipe-single">
 						<div class="row">
 							<div class="col-md-3">
-								<div class="user-picture" style="background-image: url('img/carlos.png');">
+								<?php $img = $membros[$i]['url_imagem']; ?>
+								<div class="user-picture" style="background-image: url('<?php echo($img); ?>');">
 									<div class="user-picture-child">
 									</div>
 								</div>
 							</div>
 							<div class="col-md-9">
-								<h3>Protegido por Deus</h3>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, aliquam aut incidunt amet quisquam, quaerat illo eveniet vitae quod perspiciatis cupiditate. Soluta neque eligendi ipsam, esse veniam explicabo cum quis.</p>
+								
+								<h3><?php echo $membros[$i]['nome']; ?></h3>
+								<p><?php echo $membros[$i]['descricao']; ?></p>
 							</div>
 						</div>
 					</div>
 				</div>
-
-				<div class="col-md-6">
+				<?php } ?>
+				<!-- <div class="col-md-6">
 					<div class="equipe-single">
 						<div class="row">
 							<div class="col-md-3">
@@ -255,7 +263,7 @@
 						</div>
 					</div>
 				</div>
-
+ -->
 			</div>
 		</div>
 	</div>
